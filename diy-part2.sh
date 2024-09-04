@@ -415,9 +415,7 @@ sed -i '$a wifi' package/base-files/files/etc/rc.local
 sed -i '$a exit 0' package/base-files/files/etc/rc.local
 
 # Fix the conflict between lede and small-package
-rm -rf feeds/smpackage/{base-files,dnsmasq,firewall*,fullconenat,libnftnl,nftables,ppp,opkg,ucl,upx,vsftpd-alt,miniupnpd-iptables,wireless-regdb,transmission-web-control,transmission,luci-app-transmission,aria2,ariang,qbittorrent,luci-app-qbittorrent}
+rm -rf feeds/smpackage/{luci-app-alist,base-files,dnsmasq,firewall*,fullconenat,libnftnl,nftables,ppp,opkg,ucl,upx,vsftpd-alt,miniupnpd-iptables,wireless-regdb,transmission-web-control,transmission,luci-app-transmission,aria2,ariang,qbittorrent,luci-app-qbittorrent}
 
 # Fix the Alist between lede and small-package
-git clone https://github.com/sbwml/luci-app-alist feeds/smpackage/luci-app-alist
-lede/feeds/smpackage/luci-app-alist$git tag
-lede/feeds/smpackage/luci-app-alist$git checkout v3.35.0
+git clone https://github.com/sbwml/luci-app-alist feeds/smpackage/luci-app-alist -b lua --depth=1
