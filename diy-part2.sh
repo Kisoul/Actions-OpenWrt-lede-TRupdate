@@ -415,4 +415,4 @@ sed -i '$a wifi' package/base-files/files/etc/rc.local
 sed -i '$a exit 0' package/base-files/files/etc/rc.local
 
 # Fix the conflict between lede and small-package
-rm -rf feeds/smpackage/{base-files,dnsmasq,firewall*,fullconenat,libnftnl,nftables,ppp,opkg,ucl,upx,vsftpd-alt,miniupnpd-iptables,wireless-regdb,transmission-web-control,transmission,luci-app-transmission,aria2,ariang,qbittorrent,luci-app-qbittorrent}
+rm -rf feeds/smpackage/{alist,luci-app-alist,base-files,dnsmasq,firewall*,fullconenat,libnftnl,nftables,ppp,opkg,ucl,upx,vsftpd-alt,miniupnpd-iptables,wireless-regdb,transmission-web-control,transmission,luci-app-transmission,aria2,ariang,qbittorrent,luci-app-qbittorrent}
