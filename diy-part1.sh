@@ -28,6 +28,3 @@ sed -i '1i src-git golang https://github.com/kenzok8/golang feeds/packages/lang/
 
 #Insert the code into the last line as a component supplement (prioritize using components from the source code)
 sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.conf.default
-
-# Add luci-app-xupnpd component in the source code
-sed -i '$a src-git xupnpd https://github.com/jarod360/luci-app-xupnpd.git' feeds.conf.default
