@@ -23,8 +23,8 @@
 #sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall' feeds.conf.default
 #sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
 
-# Insert the code into the first line to replace the ‘golang 1.26.5’ component in the source code (golang is smpackage compilation tools)
-sed -i '1i src-git golang https://github.com/kenzok8/golang -b 1.26 feeds/packages/lang/golang' feeds.conf.default
+# Insert the code into the first line to replace the ‘golang 1.24.13’ component in the source code (golang is smpackage compilation tools)."Disabled"can be used"‘golang 1.26.5’ 
+#sed -i '1i src-git golang https://github.com/kenzok8/golang feeds/packages/lang/golang.git' feeds.conf.default
 
 #Insert the code into the last line as a component supplement (prioritize using components from the source code)
 sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.conf.default
