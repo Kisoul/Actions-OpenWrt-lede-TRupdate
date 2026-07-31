@@ -28,3 +28,4 @@
 
 #Insert the code into the last line as a component supplement (prioritize using components from the source code)
 sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.conf.default
+sed -i 's|^src-git packages https://github.com/coolsnowwolf/packages$|#src-git packages https://github.com/coolsnowwolf/packages|' feeds.conf.default
