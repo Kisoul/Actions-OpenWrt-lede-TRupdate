@@ -414,8 +414,12 @@ sed -i '/exit 0/d' package/base-files/files/etc/rc.local
 sed -i '$a wifi' package/base-files/files/etc/rc.local
 sed -i '$a exit 0' package/base-files/files/etc/rc.local
 
-# Fix the conflict between lede and small-package
-rm -rf feeds/smpackage/{base-files,dnsmasq,firewall*,fullconenat,libnftnl,nftables,ppp,opkg,ucl,upx,vsftpd-alt,miniupnpd-iptables,wireless-regdb,transmission-web-control,transmission,luci-app-transmission,aria2,ariang,qbittorrent,luci-app-qbittorrent}
+# Fix the conflict between lede and small-package,includ aria2 qbittorent
+rm -rf feeds/smpackage/{base-files,dnsmasq,firewall*,fullconenat,libnftnl,nftables,ppp,opkg,ucl,upx,vsftpd*,miniupnpd-iptables,wireless-regdb,aria2,ariang,qbittorrent,luci-app-qbittorrent,other,qt6base,qt6tools}
+
+# Update transmission from small-package and delete from lede
+rm -rf feeds/packages/net/{transmission,transmission-web-control}
+rm -rf feeds/packages/luci/applications/luci-app-transmission
 
 # Fix the Alist between lede and small-package (Resolve Alist The issue of not displaying)
 rm -rf feeds/smpackage/luci-app-alist
